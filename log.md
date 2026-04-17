@@ -4,6 +4,41 @@
 
 ---
 
+## 2026-04-18 — 第二輪 ingest：申贖機制 + 全市場成交驗證
+
+**時間**：2026-04-18（cron loop round 2）
+**觸發**：CronCreate 排程（每半小時一次，不發 Threads）
+
+**Raw 新增**：
+- `raw/2026/04/18-twse-etf-ranking.md` — TWSE e添富 機構園地擷取全市場統計與 Top 10 成交排行
+
+**Wiki 新增**：
+- `wiki/mechanisms/creation-redemption.md` — ETF 申贖機制頁（實物 vs 現金申贖、AP 套利、主動型的透明度—套利兩難）
+
+**Wiki 更新**：
+- `wiki/etfs/00981a.md` — Timeline 加入「單日成交 #1 (128 億)」項目，Sources 加入 TWSE ranking
+
+**Index 更新**：加入 creation-redemption 列，Open Questions 新增 #6（成交量 #1 的意義）
+
+**關鍵發現**：
+1. **00981A 單日成交 128.18 億全市場 #1**，超越 0050（85 億）。主動型 ETF 已擠進成交榜前段（#1 和 #5 都是主動型）
+2. **日成交 / AUM ≈ 8.8%**，高速換手，作為 0.67% 非管理費用的量化背景
+3. **全市場 ETF 規模 59,369 億 / 221 檔 / 1,640 萬受益人次**，00981A 單檔佔 2.44%
+4. **透明度—套利兩難**命題確立：主動型為保 alpha 延遲揭露持股 → AP 套利效率下降 → 系統性溢折價
+
+**失敗嘗試**：
+- `twse.com.tw/zh/products/listed/ETF/overview.html` redirect 到首頁（URL 變動）
+- 正確路徑：`/zh/ETFortune-institute/index`
+
+**TODO for 下一輪**：
+- 讀 00981A 公開說明書「申購與買回」章節（AP 名單、申購費率、creation unit 大小）
+- 查 00981A 是否曾暫停申購或有申購上限
+- ingest 另一檔主動型 ETF（00992A，成交 #5）做對比
+- 查主動型 ETF 持股揭露頻率的法規要求（SITCA 或 FSC）
+- 找 00981A 收益平準金配息拆解（[[wiki/mechanisms/income-equalization]] 待建）
+
+---
+
 ## 2026-04-18 — 首次 ingest：00981A
 
 **時間**：2026-04-18 (manual)
