@@ -11,6 +11,7 @@ sources:
   - raw/2026/04/18-00981a-yahoo-profile.md
   - raw/2026/04/18-00981a-moneydj-basic.md
   - raw/2026/04/18-ezmoney-00981a-official.md
+  - raw/2026/04/18-capitalfund-00992a-official.md
 ---
 
 # 收益平準金（Income Equalization）
@@ -103,6 +104,10 @@ sources:
 → SITCA 函只要求「留存紀錄」，但統一投信自願做了公開查詢頁。**揭露是自發的，不是強制的**。其他主動型 ETF 是否全部都有類似查詢頁，**待查**。
 
 → 監管與業者自律之間的落差是本 wiki 要持續追的題目。
+
+**2026-04-18 round 7 跨投信驗證**：群益投信官網（[[wiki/etfs/00992a|00992A]] 發行商）的**配息查詢頁僅列金額、除息日、配息率**，**沒有**可分配淨利益 vs 本金的組成拆解。這確認「配息組成揭露」是**業者自由裁量**——統一自願公開，群益選擇不公開。兩者都合規 SITCA 函（只要求內部留存）。
+
+→ 散戶若買群益系列 ETF，**從官網查不到配息是否靠收益平準金維持**。詳見 [[wiki/mechanisms/issuer-voluntary-disclosure]]。
 
 ### 2. 「不強制錨定」 = 配息率可完全由經理人主觀決定 `[confirmed]`
 
