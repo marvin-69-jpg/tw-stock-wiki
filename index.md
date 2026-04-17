@@ -20,6 +20,7 @@
 | Page | Summary | Tags | Last Updated |
 |------|---------|------|-------------|
 | [[wiki/etfs/00981a\|00981A — 主動統一台股增長]] | 統一投信旗艦主動型 ETF，1,450 億規模、費用揭露有落差 | active-etf, taiwan-equity, uni-president, large-cap-biased | 2026-04-18 |
+| [[wiki/etfs/00992a\|00992A — 主動群益科技創新]] | 群益投信，科技主題，302 億規模、費用揭露第二種不對稱 | active-etf, taiwan-equity, capital-sitc, tech-innovation | 2026-04-18 |
 
 ### Issuers
 
