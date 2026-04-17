@@ -22,6 +22,7 @@
 | [[wiki/etfs/00981a\|00981A — 主動統一台股增長]] | 統一投信旗艦主動型 ETF，1,450 億規模、費用揭露有落差 | active-etf, taiwan-equity, uni-president, large-cap-biased | 2026-04-18 |
 | [[wiki/etfs/00992a\|00992A — 主動群益科技創新]] | 群益投信，科技主題，302 億規模、費用揭露第二種不對稱 | active-etf, taiwan-equity, capital-sitc, tech-innovation | 2026-04-18 |
 | [[wiki/etfs/00984a\|00984A — 主動安聯台灣高息成長]] | 安聯投信（外資），63 億規模、flat 0.7% 費率、ETF 配息組成完全不揭露 | active-etf, taiwan-equity, allianz, high-dividend | 2026-04-18 |
+| [[wiki/etfs/00980a\|00980A — 主動野村臺灣優選]] | 野村投信（外資日系），全台首檔主動式 ETF（2025-05-05）、135 億規模、flat 0.75% 費率、四檔中唯一月均折價 | active-etf, taiwan-equity, nomura, first-listing | 2026-04-18 |
 
 > **首批 6 檔（2025-05 到 07）**：00980A 野村優選 / 00982A 群益強棒 / 00981A 統一增長 / 00983A 中信 ARK 創新 / 00984A 安聯高息 / 00985A 野村 50
 
@@ -32,6 +33,7 @@
 | [[wiki/issuers/uni-president\|統一投信]] | 00981A 發行商，UPAMC | issuer, active-etf | 2026-04-18 |
 | [[wiki/issuers/capital-sitc\|群益投信]] | 00992A/00982A/00997A 發行商，Capital SITC。揭露風格「主動警示、配息不拆解」 | issuer, active-etf | 2026-04-18 |
 | [[wiki/issuers/allianz\|安聯投信]] | 00984A/00993A 發行商，AGI Taiwan（外資）。費率 flat 0.7%，ETF 配息組成不揭露 | issuer, active-etf, foreign-invested | 2026-04-18 |
+| [[wiki/issuers/nomura\|野村投信]] | 00980A/00985A/00999A 發行商，Nomura Asset Management Taiwan（日系外資）。費率 flat 0.75%，主動型 ETF 連發 3 檔最多 | issuer, active-etf, foreign-invested, japanese | 2026-04-18 |
 
 ### Mechanisms
 
@@ -43,7 +45,7 @@
 | [[wiki/mechanisms/active-etf-holdings-disclosure\|主動式 ETF 持股揭露]] | 全透明每日揭露 + T+1 漂移：揭露越多、alpha 越快外流 | holdings-disclosure, full-transparency, arbitrage | 2026-04-18 |
 | [[wiki/mechanisms/issuer-voluntary-disclosure\|發行商自主揭露]] | SITCA 只定底線，各投信自律差異大：統一公開配息組成、群益發溢價警告 | voluntary, self-regulation, cross-issuer-gap | 2026-04-18 |
 
-> **Fee disclosure 最新（2026-04-18 round 6–8）**：Round 6 發現第四種揭露不對稱（階梯式 vs flat 第三方壓縮）。Round 7 群益 00992A 確認本土投信 200 億斷點通例。**Round 8 安聯 00984A 推翻「業界通例」**——外資投信採 flat 0.7%，新增**第五種**揭露不對稱（本土階梯 vs 外資 flat）。詳見 [[wiki/mechanisms/active-etf-fee-disclosure]]。
+> **Fee disclosure 最新（2026-04-18 round 6–9）**：Round 6 發現第四種揭露不對稱（階梯式 vs flat 第三方壓縮）。Round 7 群益 00992A 確認本土投信 200 億斷點通例。**Round 8 安聯 00984A 推翻「業界通例」**——外資投信採 flat 0.7%，新增**第五種**揭露不對稱（本土階梯 vs 外資 flat）。**Round 9 野村 00980A 強化 flat signature**——德/日兩家外資共同指向 flat 模型，且 **4 家首批投信中 3 家不揭露配息組成**（群益、安聯、野村），只有統一揭露。詳見 [[wiki/mechanisms/active-etf-fee-disclosure]] 和 [[wiki/mechanisms/issuer-voluntary-disclosure]]。
 
 ## Open Questions
 
