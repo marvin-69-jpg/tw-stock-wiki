@@ -15,10 +15,30 @@
 
 ## Wiki Pages
 
+### ETFs
+
 | Page | Summary | Tags | Last Updated |
 |------|---------|------|-------------|
-| _(empty — 首次 ingest 後自動填充)_ | | | |
+| [[wiki/etfs/00981a\|00981A — 主動統一台股增長]] | 統一投信旗艦主動型 ETF，1,450 億規模、費用揭露有落差 | active-etf, taiwan-equity, uni-president, large-cap-biased | 2026-04-18 |
+
+### Issuers
+
+| Page | Summary | Tags | Last Updated |
+|------|---------|------|-------------|
+| [[wiki/issuers/uni-president\|統一投信]] | 00981A 發行商，UPAMC | issuer, active-etf | 2026-04-18 |
+
+### Mechanisms
+
+| Page | Summary | Tags | Last Updated |
+|------|---------|------|-------------|
+| [[wiki/mechanisms/active-etf-fee-disclosure\|主動型 ETF 費用揭露]] | TER 揭露不對稱，散戶常低估總成本 | fee, disclosure, active-etf, transparency-gap | 2026-04-18 |
 
 ## Open Questions
 
-_(首次 research report 後建立)_
+（累積中，當前是早期階段）
+
+1. **TER 揭露規範**：金管會 / 投信投顧公會對主動型 ETF 的總費用揭露是否強制？格式統一嗎？
+2. **溢價持續性**：00981A 月均 0.29% 溢價是單一現象還是整批主動型 ETF 的通病？
+3. **「創新能力」 vs 前 300 大 60% 限制**：主動型 ETF 的行銷敘事與法規限制之間的落差普遍嗎？
+4. **配息結構**：季配 ETF 的配息中，收益平準金（本金返還）佔比多少？有無強制揭露？
+5. **規模爆量下的策略變形**：00981A 一個月規模 +45% 後，持股集中度與週轉率如何變化？
