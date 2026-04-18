@@ -6,11 +6,23 @@
 
 > **2026-04-18 Round 24 Meta-correction**：首次用 TWSE primary source（ETF e添富投資篩選器）抓完整主動式 ETF 母體，發現 Round 1-23 的 Yahoo-based gap discovery **漏了 5 檔 ETF + 4 家投信**（富邦、摩根、兆豐、聯博），遺漏率 26%。見 `raw/2026/04/18-twse-active-etf-master-list.md`。本次新增 TODO 優先 ingest 缺口。
 >
-> **2026-04-18 Round 37 Meta-correction²**：Round 24 TWSE audit 本身有盲區 —— **TWSE 篩選器只含 TWSE 上市、不含 TPEx 上櫃**。聯博 00980D（2025-07-24 成立、TPEx）為**D 字尾真正首檔**但 Round 24 未見。TPEx 其他案：00998A（Round 22）、00986D（Round 30）皆個案發現。**第 16 種揭露不對稱候選：TWSE primary audit 不含 TPEx**。TODO：TPEx ETF 篩選器補強 audit。
+> **2026-04-18 Round 37 Meta-correction²**：Round 24 TWSE audit 本身有盲區 —— **TWSE 篩選器只含 TWSE 上市、不含 TPEx 上櫃**。聯博 00980D（2025-07-24 成立、TPEx）為**D 字尾真正首檔**但 Round 24 未見。TPEx 其他案：00998A（Round 22）、00986D（Round 30）皆個案發現。**第 16 種揭露不對稱候選：TWSE primary audit 不含 TPEx**。
+>
+> **2026-04-18 Round 40 Meta-correction³（TPEx primary audit）**：抓 TPEx 主動式 ETF 商品頁（`https://www.tpex.org.tw/zh-tw/product/etf/product/active.html`）列 **5 檔**，本研究先前只 ingest 3 檔，**新發現 2 檔**：(1) **00981D 主動中信非投等債**（2025-09-16 上櫃、中信第 3 檔、中信首檔 D 字尾、D 字尾實際第 2 檔）、(2) **00985D 主動貝萊德優投等**（2026-03-30 上櫃、**貝萊德投信 = 第 15 家投信**、BlackRock Taiwan）。**D 字尾總檔數修正為 7 檔**（非 Round 37/38 記的 5 檔）、**TPEx 佔 4/7（57%）**。前 2 檔 D 字尾（00980D + 00981D）都掛 TPEx → **D 字尾早期上市地偏好 TPEx**。見 `raw/2026/04/18-tpex-active-etf-master-list.md`。
 
 ## Range Gaps（2026-04-18 primary source audit）
 
-**漏掉的主動 ETF**（依代號）：
+### TPEx 主動 ETF 完整母體（Round 40 新增）
+
+| 代號 | 簡稱 | 上櫃日 | 本研究狀態 |
+|---|---|---|---|
+| 00998A | 主動復華金融股息 | 2026-04-15 | ✅ Round 22 ingest |
+| 00986D | 主動復華金融債息 | 2026-04-15 | ✅ Round 30 ingest |
+| **00985D** | **主動貝萊德優投等** | **2026-03-30** | ❌ **未 ingest / 第 15 家投信** |
+| **00981D** | **主動中信非投等債** | **2025-09-16** | ❌ **未 ingest / 中信第 3 檔** |
+| 00980D | 主動聯博投等入息 | 2025-08-04 | ✅ Round 37 ingest |
+
+### 原 TWSE audit 漏掉的主動 ETF（依代號）：
 | 代號 | 名稱 | 上市日 | 規模 | 發行人 | 漏掉原因 |
 |---|---|---|---|---|---|
 | ~~00982D~~ | ~~主動富邦動態入息~~ | ~~2025.09.30~~ | ~~8.81 億~~ | ~~富邦~~ | ✅ Round 28 ingest（發現實際成立 2025-09-30，早於 TWSE 列表 10/14）|

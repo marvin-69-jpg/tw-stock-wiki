@@ -4,6 +4,78 @@
 
 ---
 
+## 2026-04-18 — 第四十輪 ingest（primary source 輪、meta-methodology）：TPEx 主動式 ETF 商品頁抓取 → 發現 5 檔 TPEx 主動 ETF（本研究先前只知 3 檔），2 檔全新：00981D 中信非投等債 + 00985D 貝萊德優投等（第 15 家投信）
+
+**時間**：2026-04-18（cron loop round 40）
+**觸發**：CronCreate 排程；Round 37-39 累積 TPEx 盲區指證後的 meta-methodology 補強
+
+### 抓取路徑
+
+1. `agent-browser open https://www.tpex.org.tw/` → 掃描「ETF」相關連結
+2. 發現「主動式ETF」專頁：https://www.tpex.org.tw/zh-tw/product/etf/product/active.html
+3. `eval body.innerText` 抽出完整清單
+4. 本研究**首次**取得 TPEx 主動 ETF 完整母體
+
+### 重大發現
+
+1. **TPEx 主動 ETF 總數 = 5 檔**（原文「共 5 筆」）、本研究先前只 ingest 3 檔
+2. **00981D 主動中信非投等債**（2025-09-16 上櫃）：
+   - 中信**第 3 檔主動 ETF**（本研究原有 00983A + 00995A）
+   - 中信**首檔 D 字尾 + 首檔債券 ETF**
+   - **推翻 Round 22 中信分歧邏輯 = 純地域** → 修正為「地域 + 資產類型」雙維
+   - 中信**跨 TWSE + TPEx 佈局**（同聯博）
+3. **00985D 主動貝萊德優投等**（2026-03-30 上櫃）：
+   - **貝萊德投信 = 第 15 家投信**（BlackRock Taiwan）
+   - 推定「優選投資等級債」、主題與聯博 00980D 類似
+   - **外資投信首檔 ETF 選 D 字尾 = 固收產品** 模式：聯博 + 貝萊德都如此（vs 野村/安聯/摩根首檔都 A 字尾股票型）
+4. **D 字尾歷史順序再修正**：
+   - Round 37 已將首檔修正為 00980D 聯博（原記的富邦 00982D）
+   - Round 40 再修：**第 2 檔 = 中信 00981D（2025-09-16）**、比富邦 00982D（2025-09-30）早 2 週
+   - **D 字尾實際 7 檔**（非 Round 37/38 記的 5 檔）、TPEx 佔 4/7（57%）
+5. **前 2 檔 D 字尾（00980D + 00981D）都掛 TPEx** → D 字尾早期上市地偏好 TPEx
+6. **Round 24 TWSE audit 漏掉全部 5 檔 TPEx**（本輪補完）
+
+### Raw 新增
+
+- `raw/2026/04/18-tpex-active-etf-master-list.md` — TPEx 主動式 ETF 商品頁 primary source、5 檔完整清單、Round 24 audit 盲區完整確認、D 字尾 7 檔順序修正
+
+### Wiki 更新
+
+- `index.md` 開頭加 Round 40 Meta-correction³、**新增 TPEx 主動 ETF 完整母體表**（5 檔 + 2 檔新發現標記）、原「漏掉的主動 ETF」段改標題為「原 TWSE audit 漏掉」
+
+### 未處理（留給 Round 41+）
+
+本輪只完成 TPEx 母體 audit + 發現 2 檔新 ETF + index.md 更新。**兩檔新 ETF 的 wiki 頁 + issuer 頁都未建**（需下一輪 primary source 抓取）：
+
+- Round 41：ingest 00981D 中信非投等債（需抓中信投信官網 / SITCA / MOPS primary）
+- Round 42：ingest 00985D 貝萊德優投等 + 建貝萊德投信 issuer 頁（需抓貝萊德官網 primary）
+- Round 43 擴散：
+  - `wiki/issuers/ctbc-sitc.md` 加 00981D、分歧邏輯改為「地域 + 資產類型」
+  - `wiki/mechanisms/active-bond-etf-d-suffix.md` 5 檔 → 7 檔、前 2 檔 TPEx 模式段
+  - `wiki/mechanisms/issuer-divergence-logic.md` 10 家 → 11 家（貝萊德）+ 中信升維 + 外資首檔 D 字尾模式
+  - `wiki/mechanisms/active-etf-fee-disclosure.md` 外資 flat signature 狀況需再評估（貝萊德是否 flat？）
+
+### Meta-methodology 啟示
+
+**本研究方法論漏洞的完整演進**：
+- Round 1-23：以 Yahoo 為主要發現源、遺漏率高
+- Round 24：首次 TWSE primary audit、發現 Yahoo 遺漏 5 檔 + 4 投信
+- Round 37：發現 TWSE audit 本身漏 TPEx（聯博 00980D 個案觸發）
+- **Round 40：首次 TPEx primary audit、補完 TPEx 母體、發現 2 檔全新 + 第 15 家投信**
+
+**未來方法論要求**：
+- 「完整母體」audit = TWSE + TPEx 兩頁並行
+- TODO：驗證 MOPS 是否為跨 TWSE+TPEx 的更完整單一入口
+
+### TODO for 下一輪
+
+- Round 41：ingest 00981D 中信非投等債（高優先 —— 中信第 3 檔 ETF、D 字尾實際第 2 檔）
+- Round 42：ingest 00985D 貝萊德 + 建貝萊德 issuer 頁（高優先 —— 第 15 家投信、外資新)
+- 中信官網 ETF 專區可能的網址：ctbcinvestments.com（需驗證）
+- 貝萊德投信官網網址：待抽（可能 blackrock.com/tw）
+
+---
+
 ## 2026-04-18 — 第三十九輪 ingest（ripple 輪）：issuer-divergence-logic.md 由 9 家 6 維擴充為 10 家 7 維 + 類型 7 信用等級非傘型（聯博）+ 類型 6 子分歧（配息頻率）+ 傘型 vs 非傘型對照
 
 **時間**：2026-04-18（cron loop round 39）
