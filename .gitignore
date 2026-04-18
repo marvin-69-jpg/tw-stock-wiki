@@ -5,3 +5,7 @@ __pycache__/
 *.token
 .tmp/
 /tmp/
+
+# FundClear 公開說明書快取（大量 PDF、可重現、不入 repo）
+raw/prospectus/*.pdf
+raw/prospectus/*.txt
