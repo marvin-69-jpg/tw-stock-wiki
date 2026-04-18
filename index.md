@@ -14,7 +14,7 @@
 | 00982D | 主動富邦動態入息 | 2025.10.14 | 9 億 | 富邦 | 債券型 D 字尾未進 Yahoo 推薦 |
 | 00983D | 主動富邦複合收益 | 2025.10.14 | 10 億 | 富邦 | 同上 |
 | 00984D | 主動聯博全球非投 | 2026.02.04 | 13 億 | 聯博 | 外資小型投信 + 債券型 |
-| 00989A | 主動摩根美國科技 | 2025.10.22 | 18 億 | 摩根 | Yahoo 推了 00401A 反而漏 00989A（早半年） |
+| ~~00989A~~ | ~~主動摩根美國科技~~ | ~~2025.10.22~~ | ~~18 億~~ | ~~摩根~~ | ✅ Round 26 ingest |
 | 00993A | 主動安聯台灣 | 2026.02.03 | **126 億** | 安聯 | 安聯第 2 檔、規模夠大卻 Yahoo 未推 |
 
 **漏掉的投信**：富邦（首批主動債券 ETF 發行者）、摩根（00989A 是入列證據）、兆豐（00996A）、聯博（00984D 外資）
@@ -54,6 +54,7 @@
 | [[wiki/etfs/00400a\|00400A — 主動國泰動能高息]] | 國泰投信（本土、國泰金控）、**2026-03-30 成立 / 2026-04-09 上市**（Round 24 TWSE 驗證修正）、國泰首檔主動 ETF（第 10 家投信）、**8 交易日 127 億**（2026-04-17 TWSE 最新，原 Yahoo 19 天 107 億基準錯誤）、**flat 0.9%（本土 flat 0.9% 雙例，繼元大 00990A）** + **保管費罕見階梯 0.06%/0.04%（≤/>100 億）**、**動能（momentum）+ 高息 factor 首見 explicit 命名**、梁恩溢、官網 Access Denied（本土第 5 家抓取困難）| active-etf, taiwan-equity, cathay, flat-fee, momentum-strategy, high-dividend, custody-tiered | 2026-04-18 |
 | [[wiki/etfs/00996a\|00996A — 主動兆豐台灣豐收]] | 兆豐投信（**第 11 家投信**、公股兆豐金控、SITCA A0001 老牌）、**2026-03-16 成立 / 2026-03-25 上市**、31 億、**flat 0.8% + flat 0.04%（本土 flat 0.8% 第 2 家，群益後）**、季配息、王仲良、**保管銀行元大商業銀行（跨集團交叉保管首見）**、Round 24 TWSE primary source audit 時首次發現 | active-etf, taiwan-equity, megabank-itim, flat-fee, quarterly-dividend, cross-group-custody | 2026-04-18 |
 | [[wiki/etfs/00989a\|00989A — 主動摩根美國科技]] | 摩根投信（**第 12 家投信**、外資 J.P. Morgan）、**2025-10-14 成立 / 2025-10-22 上市（首批 6 檔後首檔跨國主動）**、17.80 億（6 個月慢增）、**flat 0.75% + flat 0.15%**（外資 flat signature）、美國科技、蓋欣聖單人、警語未嵌名、Yahoo 推薦從未觸及（Round 24 漏網最老案例、6 個月） | active-etf, us-equity, jpmorgan-taiwan, foreign-invested, flat-fee, tech-theme, cross-border | 2026-04-18 |
+| [[wiki/etfs/00401a\|00401A — 主動摩根台灣鑫收]] | 摩根投信（外資 J.P. Morgan）、**2026-03-31 成立 / 2026-04-10 上市（摩根台股首檔）**、27.71 億（8 交易日）、**管理費 flat 0.60% = 全研究範圍最低**（破第一金 00994A 0.70%）、保管費 flat 0.045%、保管銀行國泰世華（跨集團）、**經理人首見核心+協管：沈馨 + 魏伯宇**、**Yahoo 經理人欄只顯示核心（協管遮蔽）= 第 14 種揭露不對稱**、Yahoo 名稱截斷「鑫收益→鑫收」（Round 22 截斷第 2 例）、連 6 漲 +7.98% 未警示 | active-etf, taiwan-equity, jpmorgan-taiwan, foreign-invested, flat-fee, high-dividend, core-coadjunct-manager, lowest-management-fee | 2026-04-18 |
 
 > **首批 6 檔（2025-05 到 07）**：00980A 野村優選 / 00982A 群益強棒 / 00981A 統一增長 / 00983A 中信 ARK 創新 / 00984A 安聯高息 / 00985A 野村 50
 
@@ -72,7 +73,7 @@
 | [[wiki/issuers/first-financial-sitc\|第一金投信]] | 00994A 發行商，First Financial SITC（本土、推定第一金控）。**本土 flat 第 4 家且最低（0.70%）**、保管費 0.035% flat、揭露風格中性保守（無特殊主動策略揭露）、官網 fsitc.com.tw eval 失敗（本土第 4 家官網抓取困難）、**低費率+低規模陷阱（24 億）** | issuer, active-etf, local-sitc, taiwan-50-benchmark | 2026-04-18 |
 | [[wiki/issuers/cathay\|國泰投信]] | 00400A 發行商，Cathay SITC（本土、國泰金控）。**大型本土投信**（00878 被動 1800+ 億旗艦）、**主動首檔 19 天 107 億規模爆量**、**本土 flat 0.9% 雙例**（元大齊等）、**保管費罕見階梯 0.06%/0.04%**（本土台股唯一非 0.035% flat 且非 00981A 高水準）、**官網 Access Denied（本土第 5 家抓取困難）**、延後入市策略類似元大 | issuer, active-etf, local-sitc, large-local | 2026-04-18 |
 | [[wiki/issuers/megabank-itim\|兆豐投信]] | 00996A 發行商，Mega ITIM（**第 11 家投信**、公股兆豐金控、**SITCA A0001 老牌編號**）。首檔主動 2026-03-16 成立、31 億、**flat 0.8%**（本土 flat 0.8% 雙例繼群益 00982A）、**保管銀行元大商業銀行（跨集團首見）**、王仲良、**Yahoo gap discovery 漏網**（Round 24 TWSE primary source audit 才發現） | issuer, active-etf, local-sitc, state-linked | 2026-04-18 |
-| [[wiki/issuers/jpmorgan-taiwan\|摩根投信]] | 00989A/00401A 發行商，JPMorgan AM Taiwan（**第 12 家投信**、外資美商）。**跨國在前、台股在後**（與野村/安聯相反）、**外資 flat + 兩檔差 0.15 pp**、**00401A 台股管理費 flat 0.60% 為研究範圍最低**、**經理人架構切換**（跨國單人 vs 台股核心+協管）、官網 terms-of-use gate + **明文禁止爬蟲**、SITCA A0011、Yahoo 推薦 6 個月未觸 00989A | issuer, active-etf, foreign-invested, us-brand, scraping-restricted | 2026-04-18 |
+| [[wiki/issuers/jpmorgan-taiwan\|摩根投信]] | 00989A/00401A 發行商，JPMorgan AM Taiwan（**第 12 家投信**、外資美商）。**跨國在前、台股在後**（與野村/安聯相反）、**外資 flat + 兩檔差 0.15 pp**、**00401A 台股管理費 flat 0.60% 為研究範圍最低**、**經理人架構切換**（跨國單人蓋欣聖 vs 台股核心沈馨+協管魏伯宇）、**Yahoo 經理人欄只揭露核心、遮蔽協管（Round 27 第 14 種揭露不對稱）**、官網 terms-of-use gate + **明文禁止爬蟲**、SITCA A0011、Yahoo 推薦 6 個月未觸 00989A | issuer, active-etf, foreign-invested, us-brand, scraping-restricted | 2026-04-18 |
 
 ### Mechanisms
 
