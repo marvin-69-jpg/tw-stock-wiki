@@ -4,6 +4,85 @@
 
 ---
 
+## 2026-04-18 — 第三十五輪 ingest：建立 monthly-dividend-active-etf 機制頁（月配主動 ETF 4/4 全 D 字尾、殖利率陷阱、配息組成揭露缺口）
+
+**時間**：2026-04-18（cron loop round 35）
+**觸發**：CronCreate 排程 + Round 34 TODO 第 1 順位（月配息機制頁）
+
+**研究目的**：D 字尾 4 檔全月配、但 A 字尾月配 0 檔，配息頻率與資產類別的強關聯值得獨立成頁。此為 Round 32 以來**第 4 篇 meta-synthesis 機制頁**，完成 D 字尾三連頁（divergence + d-suffix + umbrella + monthly）。
+
+**Raw 新增**：無（純 synthesis，sources 引用 4 檔 D 字尾 + 2 個 mechanism 頁）
+
+**Wiki 新增**：
+- `wiki/mechanisms/monthly-dividend-active-etf.md` — 月配息主動式 ETF 機制頁
+
+**Wiki 更新**：
+- `index.md` — Mechanisms 表 +1 列（第 9 個機制頁）
+
+**本輪關鍵歸納**：
+
+1. **月配 4/4 全 D 字尾、A 字尾月配 0 檔**
+   - 配息頻率與資產類別**強相關**（機制層而非偶然）
+   - D 字尾月配為通例、A 字尾季/年配為通例
+   - 半年配 00991A 為跨類別中間例外
+
+2. **殖利率陷阱 4 種**
+   - 信用損失未計入（票息 ≠ 淨收益）
+   - 本金返還混入配息
+   - 浮動淨值的殖利率假象
+   - 首配水平不可持續
+   - → 散戶看到「10% 殖利率」實際淨收益可能差 2–4 pp
+
+3. **配息組成揭露缺口**（關鍵漏洞）
+   - 4 檔 D 字尾月配發行商**未公開配息組成 PDF**
+   - 對比 A 字尾統一 00981A：ezmoney 有揭露
+   - **月配頻率高 + 本金返還機率累積快 → 揭露迫切性應最高但實際最弱**
+
+4. **5 個散戶漏洞**
+   - 類年金幻覺（monthly dividend ≠ annuity）
+   - 殖利率越高越好反直覺（高殖利率 = 高信用風險）
+   - 配息組成揭露對月配的迫切性被忽略
+   - 主動操作裁量 + 月配頻率 = 配息平滑化可能
+   - 除息日 × 12 / 年 = 重複除息誤區
+
+5. **配息頻率 × 資產類別光譜**
+   - 月配 D 字尾：現金流工具（票息為主）
+   - 季配 A 字尾：穩定收益取向（股息為主）
+   - 半年配 00991A：平衡為主
+   - 年配 A 字尾：長期成長取向（資本利得為主）
+   - → 配息頻率本身是**產品定位 signal**、散戶應反向思考「現金流需求頻率 → 資產類別 → 信用風險」
+
+6. **月配 ETF 除息日 AP 套利密集度**
+   - 月配 vs 季配 vs 年配 = 12x vs 4x vs 1x
+   - 每月 1 次溢折價擴張機會
+   - 散戶認知 vs AP 機構操作機會差距放大
+
+**Open Questions 新建 6 項**：
+- A 字尾未來是否會出現月配（可能的首例預測：台新？國泰？）
+- 金管會對月配 ETF 配息組成揭露是否會率先強制
+- 月配 ETF 除息日實務（除息日前後 NAV、申贖量模式）
+- 月配 ETF tax treatment（利息 vs 資本利得 vs 本金返還稅率）
+- 高頻配息對投信營運成本的影響
+- 首配「蜜月期」效應的數量化
+
+**TODO for 下一輪**：
+1. 更新 `wiki/mechanisms/active-etf-fee-disclosure.md`（Round 27-35 所有發現整合，這頁是 Round 1-15 版本）
+2. 更新 `wiki/mechanisms/income-equalization.md`（D 字尾月配配息組成缺口整合）
+3. 建立 `wiki/mechanisms/manager-structure.md`（核心+協管、複用 vs 不複用）
+4. 建立 `wiki/mechanisms/cross-border-premium.md`（跨國溢價兩處都加通例）
+5. 建立 `wiki/mechanisms/first-batch-vs-post-first-batch.md`（首批 vs 後進策略對比）
+6. **primary source 輪**：SITCA IN2103 歷史 pid 探測 00993A 2026-01 + 00984D 2026-01
+7. 富邦、聯博、復華官網**配息組成 PDF 深頁搜尋**
+8. Round 32-35 連 4 輪 synthesis 後考慮**做一輪 primary source** 做平衡（例如回查某檔 ETF 月報、公開說明書）
+
+**達成里程碑**：
+- **第 4 篇 meta-synthesis 機制頁** —— 月配機制獨立成頁
+- **D 字尾三連頁完成**：divergence（類型 4/5 傘型）→ d-suffix（信用光譜）→ umbrella（2 例）→ monthly（配息頻率）—— D 字尾 4 檔從 Round 28-30 ingest 到 Round 33-35 mechanism 頁，閉環完成
+- **9 個機制頁總覽**：費用揭露 / 申贖 / 收益平準金 / 持股揭露 / 發行商自主揭露 / 同發行商分歧邏輯 / D 字尾 / 傘型 / **月配**
+- **研究自我建議**：Round 32-35 連 4 輪 synthesis，下輪考慮 primary source 平衡
+
+---
+
 ## 2026-04-18 — 第三十四輪 ingest：建立 umbrella-fund-active-etf 機制頁（富邦 + 復華傘型對比、2 例 2 種分歧軸）
 
 **時間**：2026-04-18（cron loop round 34）
