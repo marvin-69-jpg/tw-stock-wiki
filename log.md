@@ -4,6 +4,100 @@
 
 ---
 
+## 2026-04-18 — 第四十二輪 ingest（primary source 輪、TPEx 母體關閉）：00985D 主動貝萊德優投等（第 15 家投信 BlackRock Taiwan、iShares 品牌、外資首檔 D 字尾投等模式確立、D 字尾管理費最低 0.45%、外資投等 D 字尾費率結構趨同）
+
+**時間**：2026-04-18（cron loop round 42）
+**觸發**：CronCreate 排程；Round 40 TPEx audit 2 檔新發現的最後一檔，本輪完成。**TPEx 主動 ETF 母體 5 檔至本輪全部 ingest**。
+
+### 抓取路徑
+
+1. `agent-browser open https://tw.stock.yahoo.com/quote/00985D/profile` → profile 完整資料
+2. eval body.innerText 一次抓全頁（吸取 Round 41 教訓、不用 substring）
+3. `agent-browser open https://tw.stock.yahoo.com/quote/00985D` → 主頁成交 + 推薦清單驗證
+4. 交叉驗證：TPEx primary source（Round 40）上櫃日 + Yahoo profile 成立日 + 費率結構
+5. 本輪**未抓貝萊德官網 / MOPS**（time budget、留 TODO）
+
+### Raw 新增
+
+- `raw/2026/04/18-blackrock-00985d-yahoo.md` — 00985D Yahoo profile + 主頁完整 ingest、費率結構原文、Yahoo 推薦斷裂觀察、D 字尾 7 檔時序再定位
+
+### Wiki 新增
+
+- `wiki/etfs/00985d.md` — 完整 Compiled Truth：基本資料 / 費率結構 / 外資投等 D 字尾費率結構對比（聯博 vs 貝萊德）/ 外資首檔 ETF = D 字尾投等 模式 / Yahoo 推薦演算法完全斷裂 / iShares 品牌嵌入命名 / 6 個觀察
+- `wiki/issuers/blackrock-taiwan.md` — **第 15 家投信首建**：母集團資訊（BlackRock Inc. + iShares）、台灣總部、外資投等 D 字尾雙例比較（貝萊德 vs 聯博）、「第 15 家」的戰略意義、投信母體關閉結論
+
+### Wiki 更新
+
+- `index.md` — 頂部 Round 42 note（TPEx 母體關閉）、TPEx 母體表 00985D 標為 ✅、新增 00985D ETF row、新增貝萊德投信 issuer row
+
+### 重大發現
+
+1. **投信母體至 Round 42 關閉**：本研究主動式 ETF 發行商總數 = **15 家**（本土 + 外資合計）
+   - 五大首批：統一 / 群益 / 安聯 / 野村 / 中信
+   - 本土後進：元大、復華、第一金、台新、國泰、兆豐、富邦、（復華傘型）
+   - 外資後進：摩根、聯博、**貝萊德**
+
+2. **外資首檔 ETF = D 字尾投等 模式確立**（聯博 + 貝萊德雙例）：
+   - 聯博 00980D（2025-07-24）→ 貝萊德 00985D（2026-03-20）
+   - 美資固收專業投信**母集團品牌優勢直接複製到台灣**
+   - 對比：歐日資首檔都選 A 字尾股票（安聯 / 野村 / 摩根）
+
+3. **外資投等 D 字尾保管費結構 100% 相同**：
+   - 貝萊德 2 段階梯 0.12/0.08%、斷點 300 億
+   - 聯博 2 段階梯 0.12/0.08%、斷點 300 億
+   - → **保管費結構收斂為「外資投等 D 字尾標準」**？（需第 3 家外資投等確認）
+   - 推論：300 億 ≈ $10 億 USD、全球 iShares / AB 規模節點
+
+4. **貝萊德管理費 = D 字尾最低 0.45%**：
+   - 比聯博 00980D 0.60% 實收低 0.15 pp
+   - 推論：BlackRock $10 兆 AUM 全球規模紅利 → 台灣定價激進
+
+5. **iShares 品牌明文嵌入基金名稱**首見：
+   - 全名「貝萊德 iShares 安碩收益優化投資等級債主動式 ETF」
+   - 外資**自家子品牌**嵌入（vs 中信 ARK = 外部授權）
+   - 揭露含意：利用全球品牌資產縮短辨識成本
+
+6. **Yahoo 推薦演算法完全斷裂**（第 17 種揭露不對稱候選）：
+   - 00985D 推薦全為台股大盤股（台積電/聯發科/台達電/0050/鴻海）
+   - 無任何債券 ETF 同儕、推薦類別完全錯
+   - 對比 Round 29/41：00984D/00981D 推薦至少為被動非投等債（類別對）
+   - 差異推論：規模 9 億 + 成立 29 天 → 演算法退化到**大盤預設清單**
+
+7. **成立→上櫃 10 天 = D 字尾最短**：
+   - 貝萊德 10 天 / 聯博 11 天 / 中信 13 天 / 富邦同日 / 復華 15 天
+   - 外資流程效率（或母集團先行準備紅利）
+
+8. **散戶規模成長緩慢**：
+   - iShares 全球品牌優勢**未直接轉化為台灣散戶熱度**
+   - 9 億 / 1 個月 vs 元大 00990A 254 億、復華 00991A 309 億
+
+### 失敗嘗試
+
+- 本輪未抓貝萊德官網（https://www.blackrock.com/tw）、MOPS 公開說明書（留 TODO）
+- iShares 境外 ETF 在台銷售清單未驗證
+
+### TODO for 後續輪
+
+- Round 43（擴散）：
+  - `wiki/mechanisms/active-bond-etf-d-suffix.md` 5 檔 → **7 檔**（加 00981D 三段保管費斷點分歧 + 00985D 外資投等 D 字尾費率趨同 + 外資首檔 = D 字尾投等模式）
+  - `wiki/mechanisms/issuer-divergence-logic.md` 10 家 → **11 家**（加貝萊德、目前 1 檔僅列、中信升維為雙維範本）
+  - `wiki/mechanisms/active-etf-fee-disclosure.md` 外資 flat signature 最終評估（貝萊德亦階梯、signature 歸納失效確認）
+- Round 44+：
+  - 貝萊德官網 blackrock.com/tw 抓產品頁、揭露風格、投信整體資料
+  - MOPS 00985D 公開說明書（管理費階梯斷點驗證、保管銀行、收益平準金條款）
+  - SITCA 貝萊德會員編號
+  - 00981D 中信 MOPS 驗證（Round 41 留存 TODO）
+  - 經理人游忠憲背景
+  - iShares 境外 ETF 在台銷售清單（品牌繼承基礎）
+
+### 方法論確認
+
+- Yahoo profile 作為 scaffold primary 效率高、資料欄位完整（Round 41-42 皆證實）
+- TPEx primary（Round 40）+ Yahoo profile（Round 41-42）雙層交叉驗證奏效
+- 投信母體 audit 關閉為研究階段里程碑 → 後續 primary 聚焦於**產品線擴張**、**公開說明書深挖**、**機制頁更新**
+
+---
+
 ## 2026-04-18 — 第四十一輪 ingest（primary source 輪、Round 40 補完）：00981D 主動中信非投等債（中信第 3 檔、首檔 D 字尾 + 首檔債券 ETF、D 字尾實際第 2 檔）+ 中信分歧邏輯升維（地域 + 資產類型雙維）+ 三段階梯保管費斷點分歧（100/200 億 ≠ 富邦 100/300 億）
 
 **時間**：2026-04-18（cron loop round 41）
