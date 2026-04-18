@@ -4,6 +4,62 @@
 
 ---
 
+## 2026-04-18 — 第四十三輪 ingest（ripple 擴散：機制頁整併 Round 40-42 發現）：active-bond-etf-d-suffix 5 檔 → 7 檔 + issuer-divergence-logic 10 家 7 維 → 11 家 8 維（新 Type 8 中信雙維 + 貝萊德第 15 家）+ active-etf-fee-disclosure 外資 flat signature 最終推翻
+
+**時間**：2026-04-18（cron loop round 43）
+**觸發**：CronCreate 排程；Round 42 log 明列之 TODO「Round 43（擴散）」。純機制頁 ripple、無新 ETF/issuer primary，**本輪不抓網頁、不動 raw**。
+
+### 抓取路徑
+
+無（純機制頁擴散整併）。
+
+### Wiki 更新（機制頁，3 個）
+
+- `wiki/mechanisms/active-bond-etf-d-suffix.md`：
+  - TL;DR 5 → **7 檔**（00981D 中信 + 00985D 貝萊德）
+  - Section 1 D 字尾對照表補 00981D、00985D 完整費率結構
+  - Section 2 費率光譜 7 檔（00985D 管理費最低 0.55% / 00981D 中信 0.75%）
+  - Section 3「外資 flat signature 推翻」→「最終推翻」：新增 Round 42 外資投等 D 字尾費率結構趨同（聯博 + 貝萊德保管費 100% 相同 0.12/0.08%、斷點 300 億、**跨投信同類產品定價收斂**）
+  - Section 4「保管費三段階梯首見富邦」→「保管費階梯結構 — 通用結構但斷點為投信級設計」：富邦 100/300 vs 中信 100/200 斷點分歧、聯博 vs 貝萊德 2 段全一致
+  - Section 5 月配息 7 檔
+  - Section 7 新增「外資首檔 ETF = D 字尾投等 模式」（聯博 + 貝萊德雙例、對比安聯/野村/摩根）
+  - Section 8 新增「中信分歧邏輯升維範本」
+  - Section 9 TPEx 盲區 4/7 更新、Round 40-42 補完時序
+- `wiki/mechanisms/issuer-divergence-logic.md`：
+  - TL;DR 10 家 → **11 家**、7 維 → **8 維**
+  - Section 2 新增 Type 8 雙維分歧（**中信** 00983A / 00995A / 00981D、地域 + 資產類型）
+  - Section 3 純地域表移除中信列（升維為 Type 8）
+  - Section 7 交叉表 11 家 8 維、貝萊德 1 檔暫不計入、外資 4/11
+  - Timeline Round 40-43 4 條 entry
+  - Open Questions 新增 2 條（美資首檔 D 字尾投等偏好、雙維分歧是否為 3 檔以上投信通例）
+- `wiki/mechanisms/active-etf-fee-disclosure.md`：Round 13 推翻段下新增「Round 42-43 最終推翻：外資投等 D 字尾 100% 階梯」、結論 **flat vs 階梯 ≈ 策略類型偏好、非國籍決定**（外資股票/非投等才 flat、外資投等全階梯）
+
+### Index 更新
+
+- `index.md` 頂部新增 Round 43 note
+- Mechanism rows：active-bond-etf-d-suffix 5 → 7 檔、issuer-divergence-logic 10 家 7 維 → 11 家 8 維
+
+### 本輪主要觀察 / 升維
+
+1. **中信分歧邏輯從 Round 22 純地域（Type 3）升為 Type 8 雙維**（地域 + 資產類型）—— 本研究首個雙維分歧投信。升維觸發：Round 41 加入 00981D 後「股/債」軸加入「跨國/國內」軸、單一維度不可概括。
+2. **外資 flat signature 最終推翻**：Round 13 曾部分推翻（台新本土也 flat），Round 42 完全推翻（外資投等 D 字尾兩家兩檔全階梯）。重構結論：**flat vs 階梯 ≈ 策略類型偏好**（股票普遍 flat、投等普遍階梯），與國籍無關。
+3. **外資投等 D 字尾保管費 300 億斷點收斂**：聯博 + 貝萊德 2 段階梯 0.12/0.08%、斷點 300 億、100% 相同。推論跨投信同類產品定價收斂，推測對應全球 iShares/AB 規模節點 $10 億 USD。
+4. **外資首檔 ETF = D 字尾投等模式**：聯博（00980D）+ 貝萊德（00985D）雙例，對比安聯（德資首檔股票）/ 野村（日資首檔股票）/ 摩根（美資但首檔選美股科技）—— 假說：美資固收全球品牌（BlackRock iShares + AllianceBernstein）規模最大、複製至台灣路徑相似。
+
+### 提交
+
+單次 commit、本輪不開 PR（純 wiki 機制頁 ripple、log 已記錄，依 CLAUDE.md「純 wiki ingest 可以直接 push main」）。
+
+### TODO（Round 44+）
+
+- 第 3 家美資投等 D 字尾 ETF 出現時驗證 300 億斷點是否繼續
+- 觀察第 3 家 3 檔以上投信（除中信外）是否出現雙維分歧
+- 貝萊德第 2 檔 ETF 出現時歸類其分歧邏輯
+- `wiki/mechanisms/tpex-vs-twse-listing.md` 可考慮建立：TPEx 母體 5 檔（4 檔 D 字尾 + 1 檔 A 股 00998A）、D 字尾早期偏好 TPEx、跨所佈局投信清單（聯博 + 中信 2 家）
+- 抓 MOPS / 貝萊德官網補公司登記、SITCA 會員編號
+
+---
+
 ## 2026-04-18 — 第四十二輪 ingest（primary source 輪、TPEx 母體關閉）：00985D 主動貝萊德優投等（第 15 家投信 BlackRock Taiwan、iShares 品牌、外資首檔 D 字尾投等模式確立、D 字尾管理費最低 0.45%、外資投等 D 字尾費率結構趨同）
 
 **時間**：2026-04-18（cron loop round 42）
