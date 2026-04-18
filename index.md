@@ -4,6 +4,21 @@
 
 研究主題：**台灣主動型 ETF 的體制與機制漏洞**。
 
+> **2026-04-18 Round 24 Meta-correction**：首次用 TWSE primary source（ETF e添富投資篩選器）抓完整主動式 ETF 母體，發現 Round 1-23 的 Yahoo-based gap discovery **漏了 5 檔 ETF + 4 家投信**（富邦、摩根、兆豐、聯博），遺漏率 26%。見 `raw/2026/04/18-twse-active-etf-master-list.md`。本次新增 TODO 優先 ingest 缺口。
+
+## Range Gaps（2026-04-18 primary source audit）
+
+**漏掉的主動 ETF**（依代號）：
+| 代號 | 名稱 | 上市日 | 規模 | 發行人 | 漏掉原因 |
+|---|---|---|---|---|---|
+| 00982D | 主動富邦動態入息 | 2025.10.14 | 9 億 | 富邦 | 債券型 D 字尾未進 Yahoo 推薦 |
+| 00983D | 主動富邦複合收益 | 2025.10.14 | 10 億 | 富邦 | 同上 |
+| 00984D | 主動聯博全球非投 | 2026.02.04 | 13 億 | 聯博 | 外資小型投信 + 債券型 |
+| 00989A | 主動摩根美國科技 | 2025.10.22 | 18 億 | 摩根 | Yahoo 推了 00401A 反而漏 00989A（早半年） |
+| 00993A | 主動安聯台灣 | 2026.02.03 | **126 億** | 安聯 | 安聯第 2 檔、規模夠大卻 Yahoo 未推 |
+
+**漏掉的投信**：富邦（首批主動債券 ETF 發行者）、摩根（00989A 是入列證據）、兆豐（00996A）、聯博（00984D 外資）
+
 ## Structure
 
 - `wiki/etfs/` — 個別 ETF
@@ -36,7 +51,7 @@
 | [[wiki/etfs/00994a\|00994A — 主動第一金台股優]] | 第一金投信（本土、推定第一金控）、**2025-12-26 成立、第一金首檔主動 ETF（第 9 家投信）**、24.28 億、**flat 0.70%（本土 flat 第 4 家且最低）**、保管費 flat 0.035%、benchmark 臺灣 50 指數、名稱「趨勢優選」**benchmark 與名稱策略對應模糊**、張正中、連 4 漲 8.84%、Yahoo 瀏覽第 4 名但規模低、**低費率+低規模陷阱** | active-etf, taiwan-equity, first-financial, flat-fee, taiwan-50-benchmark | 2026-04-18 |
 | [[wiki/etfs/00995a\|00995A — 主動中信台灣卓越]] | 中信投信（本土、中信金控）、**2026-01-13 成立、中信第 2 檔主動 ETF**、44.87 億、**flat 0.75%** + 保管 flat 0.035%、Yahoo benchmark 欄位空白、張書廷、**中信同發行商內費率結構不一致：台股 flat vs 美股 4 段階梯**、**分歧邏輯 = 地域（同台新）**、**本土台股 flat 0.75% 雙例**（繼 00987A 台新）、**警語嵌名 Round 19 歸納部分削弱**（00995A 未嵌警語 vs 00983A 嵌入）| active-etf, taiwan-equity, ctbc, flat-fee, second-from-issuer | 2026-04-18 |
 | [[wiki/etfs/00998a\|00998A — 主動復華金融股息]] | 復華投信（本土、推定華南金）、**2026-03-31 成立、復華第 2 檔主動 ETF、櫃 ETF TPEx 首見、傘型基金子基金首見**、28.42 億（3 週）、**階梯 1.2%/1.0%** + 保管 0.10%~0.14%、**全球金融股+股息策略**、張正宇、**復華分歧邏輯 = 地域（第 3 家地域分歧）**、**警語嵌名官網加長版**（含「且本基金並無保證收益及配息」）、**Round 21 Yahoo 截斷誤判反削弱**——Round 19 警語嵌名歸納恢復效力 | active-etf, global-equity, fuhwa, cross-border, tiered-fee, otc-etf, umbrella-fund, warning-in-name, financial-sector | 2026-04-18 |
-| [[wiki/etfs/00400a\|00400A — 主動國泰動能高息]] | 國泰投信（本土、國泰金控）、**2026-03-30 成立、國泰首檔主動 ETF（第 10 家投信）**、**19 天 107.18 億（規模爆量第 2 快）**、**flat 0.9%（本土 flat 0.9% 雙例，繼元大 00990A）** + **保管費罕見階梯 0.06%/0.04%（≤/>100 億）**、**動能（momentum）+ 高息 factor 首見 explicit 命名**、梁恩溢、Yahoo 瀏覽激增第 2 名、官網 Access Denied（本土第 5 家抓取困難）| active-etf, taiwan-equity, cathay, flat-fee, momentum-strategy, high-dividend, custody-tiered | 2026-04-18 |
+| [[wiki/etfs/00400a\|00400A — 主動國泰動能高息]] | 國泰投信（本土、國泰金控）、**2026-03-30 成立 / 2026-04-09 上市**（Round 24 TWSE 驗證修正）、國泰首檔主動 ETF（第 10 家投信）、**8 交易日 127 億**（2026-04-17 TWSE 最新，原 Yahoo 19 天 107 億基準錯誤）、**flat 0.9%（本土 flat 0.9% 雙例，繼元大 00990A）** + **保管費罕見階梯 0.06%/0.04%（≤/>100 億）**、**動能（momentum）+ 高息 factor 首見 explicit 命名**、梁恩溢、官網 Access Denied（本土第 5 家抓取困難）| active-etf, taiwan-equity, cathay, flat-fee, momentum-strategy, high-dividend, custody-tiered | 2026-04-18 |
 
 > **首批 6 檔（2025-05 到 07）**：00980A 野村優選 / 00982A 群益強棒 / 00981A 統一增長 / 00983A 中信 ARK 創新 / 00984A 安聯高息 / 00985A 野村 50
 
