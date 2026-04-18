@@ -13,7 +13,7 @@
 |---|---|---|---|---|---|
 | ~~00982D~~ | ~~主動富邦動態入息~~ | ~~2025.09.30~~ | ~~8.81 億~~ | ~~富邦~~ | ✅ Round 28 ingest（發現實際成立 2025-09-30，早於 TWSE 列表 10/14）|
 | ~~00983D~~ | ~~主動富邦複合收益~~ | ~~2025.09.30~~ | ~~10.32 億~~ | ~~富邦~~ | ✅ Round 28 ingest |
-| 00984D | 主動聯博全球非投 | 2026.02.04 | 13 億 | 聯博 | 外資小型投信 + 債券型 |
+| ~~00984D~~ | ~~主動聯博全球非投~~ | ~~2026.02.04~~ | ~~13 億~~ | ~~聯博~~ | ✅ Round 29 ingest（成立 2026-01-22）|
 | ~~00989A~~ | ~~主動摩根美國科技~~ | ~~2025.10.22~~ | ~~18 億~~ | ~~摩根~~ | ✅ Round 26 ingest |
 | 00993A | 主動安聯台灣 | 2026.02.03 | **126 億** | 安聯 | 安聯第 2 檔、規模夠大卻 Yahoo 未推 |
 
@@ -57,6 +57,7 @@
 | [[wiki/etfs/00401a\|00401A — 主動摩根台灣鑫收]] | 摩根投信（外資 J.P. Morgan）、**2026-03-31 成立 / 2026-04-10 上市（摩根台股首檔）**、27.71 億（8 交易日）、**管理費 flat 0.60% = 全研究範圍最低**（破第一金 00994A 0.70%）、保管費 flat 0.045%、保管銀行國泰世華（跨集團）、**經理人首見核心+協管：沈馨 + 魏伯宇**、**Yahoo 經理人欄只顯示核心（協管遮蔽）= 第 14 種揭露不對稱**、Yahoo 名稱截斷「鑫收益→鑫收」（Round 22 截斷第 2 例）、連 6 漲 +7.98% 未警示 | active-etf, taiwan-equity, jpmorgan-taiwan, foreign-invested, flat-fee, high-dividend, core-coadjunct-manager, lowest-management-fee | 2026-04-18 |
 | [[wiki/etfs/00982d\|00982D — 主動富邦動態入息]] | 富邦投信（**第 13 家投信**、本土富邦金控、Round 28 首建）、**2025-09-30 成立（主動債券 ETF D 字尾首見）**、8.81 億、**管理費階梯 0.45%/0.55%**、**保管費三段階梯 0.10/0.08/0.05%（首見三段）**、投資級債、全球、黃詩紋、**月配息首見**（2026-M3 配 0.052 元 / 4/20 除息）、**富邦優選收益傘型子基金**（傘型第 2 例，繼復華）| active-etf, active-bond-etf, d-suffix, fubon, cross-border, investment-grade-bond, umbrella-fund, monthly-dividend, tiered-custody-3step | 2026-04-18 |
 | [[wiki/etfs/00983d\|00983D — 主動富邦複合收益]] | 富邦投信、**2025-09-30 成立（同傘姊妹）**、10.32 億、**管理費階梯 0.55%/0.65%（比 00982D +0.10 pp）**、**保管費三段階梯 0.10/0.08/0.06%**、複合收益債（疑含非投等）、全球、游陳達（同傘不同人）、**月配息** 0.06 元（年化 ≈ 7.05%）、**同傘內分歧邏輯 = 風險等級（第 5 種分歧邏輯）** | active-etf, active-bond-etf, d-suffix, fubon, cross-border, multi-sector-bond, umbrella-fund, monthly-dividend, tiered-custody-3step | 2026-04-18 |
+| [[wiki/etfs/00984d\|00984D — 主動聯博全球非投]] | 聯博投信（**第 14 家投信**、外資美商 AllianceBernstein、Round 29 首建）、**2026-01-22 成立（主動債券 ETF 第 3 檔）**、12.86 億（3 個月）、**flat 0.80% + flat 0.12%**（外資 flat signature 延續至債券型）、**非投等債直白嵌名**、全球、陳俊憲、**月配息 0.085 元 = 年化 ≈ 10.07%（本研究最高殖利率）**、地址 **101 大樓 81 樓**、**Yahoo 推薦演算法對非投等債完全斷裂**（只推大盤股） | active-etf, active-bond-etf, d-suffix, alliancebernstein, foreign-invested, cross-border, high-yield-bond, non-investment-grade, flat-fee, monthly-dividend | 2026-04-18 |
 
 > **首批 6 檔（2025-05 到 07）**：00980A 野村優選 / 00982A 群益強棒 / 00981A 統一增長 / 00983A 中信 ARK 創新 / 00984A 安聯高息 / 00985A 野村 50
 
@@ -77,6 +78,7 @@
 | [[wiki/issuers/megabank-itim\|兆豐投信]] | 00996A 發行商，Mega ITIM（**第 11 家投信**、公股兆豐金控、**SITCA A0001 老牌編號**）。首檔主動 2026-03-16 成立、31 億、**flat 0.8%**（本土 flat 0.8% 雙例繼群益 00982A）、**保管銀行元大商業銀行（跨集團首見）**、王仲良、**Yahoo gap discovery 漏網**（Round 24 TWSE primary source audit 才發現） | issuer, active-etf, local-sitc, state-linked | 2026-04-18 |
 | [[wiki/issuers/jpmorgan-taiwan\|摩根投信]] | 00989A/00401A 發行商，JPMorgan AM Taiwan（**第 12 家投信**、外資美商）。**跨國在前、台股在後**（與野村/安聯相反）、**外資 flat + 兩檔差 0.15 pp**、**00401A 台股管理費 flat 0.60% 為研究範圍最低**、**經理人架構切換**（跨國單人蓋欣聖 vs 台股核心沈馨+協管魏伯宇）、**Yahoo 經理人欄只揭露核心、遮蔽協管（Round 27 第 14 種揭露不對稱）**、官網 terms-of-use gate + **明文禁止爬蟲**、SITCA A0011、Yahoo 推薦 6 個月未觸 00989A | issuer, active-etf, foreign-invested, us-brand, scraping-restricted | 2026-04-18 |
 | [[wiki/issuers/fubon\|富邦投信]] | 00982D/00983D 發行商，Fubon Asset Management（**第 13 家投信**、本土富邦金控、Round 28 首建）。**被動 ETF 線強（00881/0052 等），主動 ETF 2025-09 才進場**。**主動債券 ETF（D 字尾）全研究首見發行者**、**月配息首例**、**三段階梯保管費首見**、**富邦優選收益傘型（傘型第 2 例，繼復華）**、**同傘內分歧邏輯 = 風險等級**（第 5 種同發行商分歧邏輯）、雙經理人不複用（黃詩紋 / 游陳達） | issuer, active-etf, active-bond-etf, fubon, local-sitc, financial-group-linked, umbrella-fund | 2026-04-18 |
+| [[wiki/issuers/alliancebernstein\|聯博投信]] | 00984D 發行商，AllianceBernstein / AB Funds Taiwan（**第 14 家投信**、外資美商、Round 29 首建）。**外資固收權威、以「非投等債」進場主動 ETF**、**與摩根策略分歧（股 vs 債）**、**外資 flat signature 延續到債券型（flat 0.80%+0.12%）**、**風險標示直白嵌名（非投資等級）**、地址**101 大樓 81 樓（外資最高階）**、境外基金 AB 全球非投高收益轉 ETF 推定、年化殖利率 10.07% 本研究最高 | issuer, active-etf, active-bond-etf, alliancebernstein, foreign-invested, us-brand, fixed-income-specialist | 2026-04-18 |
 
 ### Mechanisms
 
