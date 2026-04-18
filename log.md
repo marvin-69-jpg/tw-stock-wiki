@@ -4,6 +4,70 @@
 
 ---
 
+## 2026-04-18 — 第三十七輪 ingest（primary source 輪）：聯博官網 → 發現 00980D 投等入息（D 字尾真正首檔、Round 24 TWSE audit 盲區）+ 外資階梯費率首見推翻 flat signature + 淨值 A+B+C 每日揭露
+
+**時間**：2026-04-18（cron loop round 37）
+**觸發**：CronCreate 排程
+
+### 重大發現
+
+1. **聯博第 2 檔主動 ETF 00980D**（Round 29 漏、Round 24 TWSE audit 也漏）
+   - 成立 **2025-07-24**（D 字尾**真正首檔**、早於富邦 00982D 2025-09-30）
+   - **掛 TPEx（非 TWSE）** → **Round 24 TWSE primary audit 盲區成因**
+   - TWSE 篩選器只含 TWSE 上市、不含 TPEx 上櫃
+
+2. **外資階梯費率首見** → 推翻 Round 29「聯博 flat signature」
+   - 00980D 管理費 階梯 0.65%/0.60%、保管費 階梯 0.12%/0.08%（300 億斷點）
+   - vs 00984D flat 0.80%+0.12%
+   - **聯博跨信用等級費率結構分歧**：投等（量化）階梯 / 非投等（全主動）flat
+
+3. **淨值 A+B+C 每日揭露 = 本研究最高品質 NAV 揭露**
+   - 聯博每日揭露：淨值 = 基本面額 A（20.00）+ 收益平準金 B + 資本損益平準金 C
+   - B 每日約增 0.01、單調上升；C 波動大（-0.05 至 +0.59）
+   - 對比統一 00981A 季度揭露、富邦/復華 D 字尾無組成拆解
+
+4. **發行價 20 元首見**（非常見 15 元）
+5. **同投信跨 TPEx+TWSE 佈局首見**（聯博 00980D TPEx + 00984D TWSE）
+6. **聯博成為第 10 家 ≥2 檔投信**（推翻 Round 29 唯一 1 檔觀察）
+7. **第 7 種同發行商分歧邏輯 = 信用等級（非傘型）**（對比富邦傘型信用等級）
+
+### Meta-methodology 修正
+
+- **Round 24 TWSE primary source audit 本身有盲區** → 我的 audit 與散戶 Yahoo 盲區同樣機制（篩選平台不全）
+- **第 16 種揭露不對稱候選**：**「TWSE primary audit 不含 TPEx」**
+- → TODO：TPEx ETF 篩選器補強 audit
+
+### Raw 新增
+
+- `raw/2026/04/18-ab-00980d-official.md` — 聯博官網 00980D 基金檔案專頁 primary source（agent-browser CDP + eval body innerText）
+
+### Wiki 新增 / 更新
+
+**新建**：
+- `wiki/etfs/00980d.md` — 00980D 主動聯博投等入息（完整 Compiled Truth、A+B+C 每日揭露樣本、信評分佈、S 智選策略、D 字尾光譜修正、TWSE audit 盲區 meta-observation）
+
+**更新**：
+- `wiki/issuers/alliancebernstein.md` — 修正為 2 檔、新增聯博分歧邏輯（信用等級非傘型）、外資 flat signature 推翻、Timeline 加回溯 2025-07-24 00980D 成立
+- `index.md` — 新增 00980D 列、更新聯博 issuer 描述（2 檔、信用等級分歧、TWSE audit 盲區）、開頭加 Round 37 meta-correction²
+
+### 待擴散（Round 38+）
+
+- `wiki/mechanisms/active-bond-etf-d-suffix.md` → 5 檔（加 00980D）+ 歷史順序修正（00980D 為真正首檔 D）
+- `wiki/mechanisms/issuer-divergence-logic.md` → 10 家（聯博加入）+ 類型擴展「信用等級（非傘型）」
+- `wiki/mechanisms/active-etf-fee-disclosure.md` → 「外資 flat signature」降級為「傾向」、加入外資階梯案例
+- `wiki/mechanisms/inav-vs-nav-disclosure.md`（待建）→ 第 15 種揭露不對稱（A+B+C 揭露品質光譜）
+- TPEx ETF 篩選器 URL + 主動 ETF 完整名單抓取（補 Round 24 audit 盲區）
+- 00980D 經理人抽取 + 是否同 00984D 陳俊憲
+- 00980D 2025-10 至 2026-04 ≈7 次月配歷史完整抓取
+
+### TODO for 下一輪
+
+- Round 38：active-bond-etf-d-suffix.md 更新為 5 檔 + 首檔順序修正
+- Round 39：issuer-divergence-logic.md 加聯博信用等級非傘型分歧
+- Round 40：TPEx 補強 audit（TPEx ETF 篩選器或上櫃主動 ETF 母體）
+
+---
+
 ## 2026-04-18 — 第三十六輪 ingest（primary source 輪）：00993A 安聯 ETF 官網 eventsite 抓取 → 配息頻率 Round 31 推測季配修正為年配 + 同發行商配息頻率分化首見
 
 **時間**：2026-04-18（cron loop round 36）
