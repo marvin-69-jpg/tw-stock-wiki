@@ -36,6 +36,7 @@
 | [[wiki/etfs/00994a\|00994A — 主動第一金台股優]] | 第一金投信（本土、推定第一金控）、**2025-12-26 成立、第一金首檔主動 ETF（第 9 家投信）**、24.28 億、**flat 0.70%（本土 flat 第 4 家且最低）**、保管費 flat 0.035%、benchmark 臺灣 50 指數、名稱「趨勢優選」**benchmark 與名稱策略對應模糊**、張正中、連 4 漲 8.84%、Yahoo 瀏覽第 4 名但規模低、**低費率+低規模陷阱** | active-etf, taiwan-equity, first-financial, flat-fee, taiwan-50-benchmark | 2026-04-18 |
 | [[wiki/etfs/00995a\|00995A — 主動中信台灣卓越]] | 中信投信（本土、中信金控）、**2026-01-13 成立、中信第 2 檔主動 ETF**、44.87 億、**flat 0.75%** + 保管 flat 0.035%、Yahoo benchmark 欄位空白、張書廷、**中信同發行商內費率結構不一致：台股 flat vs 美股 4 段階梯**、**分歧邏輯 = 地域（同台新）**、**本土台股 flat 0.75% 雙例**（繼 00987A 台新）、**警語嵌名 Round 19 歸納部分削弱**（00995A 未嵌警語 vs 00983A 嵌入）| active-etf, taiwan-equity, ctbc, flat-fee, second-from-issuer | 2026-04-18 |
 | [[wiki/etfs/00998a\|00998A — 主動復華金融股息]] | 復華投信（本土、推定華南金）、**2026-03-31 成立、復華第 2 檔主動 ETF、櫃 ETF TPEx 首見、傘型基金子基金首見**、28.42 億（3 週）、**階梯 1.2%/1.0%** + 保管 0.10%~0.14%、**全球金融股+股息策略**、張正宇、**復華分歧邏輯 = 地域（第 3 家地域分歧）**、**警語嵌名官網加長版**（含「且本基金並無保證收益及配息」）、**Round 21 Yahoo 截斷誤判反削弱**——Round 19 警語嵌名歸納恢復效力 | active-etf, global-equity, fuhwa, cross-border, tiered-fee, otc-etf, umbrella-fund, warning-in-name, financial-sector | 2026-04-18 |
+| [[wiki/etfs/00400a\|00400A — 主動國泰動能高息]] | 國泰投信（本土、國泰金控）、**2026-03-30 成立、國泰首檔主動 ETF（第 10 家投信）**、**19 天 107.18 億（規模爆量第 2 快）**、**flat 0.9%（本土 flat 0.9% 雙例，繼元大 00990A）** + **保管費罕見階梯 0.06%/0.04%（≤/>100 億）**、**動能（momentum）+ 高息 factor 首見 explicit 命名**、梁恩溢、Yahoo 瀏覽激增第 2 名、官網 Access Denied（本土第 5 家抓取困難）| active-etf, taiwan-equity, cathay, flat-fee, momentum-strategy, high-dividend, custody-tiered | 2026-04-18 |
 
 > **首批 6 檔（2025-05 到 07）**：00980A 野村優選 / 00982A 群益強棒 / 00981A 統一增長 / 00983A 中信 ARK 創新 / 00984A 安聯高息 / 00985A 野村 50
 
@@ -52,6 +53,7 @@
 | [[wiki/issuers/yuanta\|元大投信]] | 00990A 發行商，Yuanta SITC（**台灣最大本土投信**）。**延後入市**（2025-12-02、晚首批 6–7 個月）、**直接跳過台股切入全球 AI**、**雙 flat 結構**（管理 0.9% + 保管 0.15%）、**跨國主動 ETF 當前最低總負擔**、被動線龐大（00050/00878/00940） | issuer, active-etf, local-sitc, largest-local | 2026-04-18 |
 | [[wiki/issuers/fuhwa\|復華投信]] | 00991A/00998A/00986D 發行商，Fuhwa SITC（本土、推定華南金）。**警語嵌名全產品統一（中信後本土第 2 家，跨國/股息版加長）**、**揭露品質高端**（活動頁列 4 維選股策略 + 20 個股舉例）、**同發行商內費率結構不一致：台股 1.0%/0.8% + 0.035% vs 全球 1.2%/1.0% + 0.10%~0.14%**、**分歧邏輯 = 地域（第 3 家地域分歧）**、**傘型基金首見**（復華金融股債雙收傘型）、每檔獨立經理人不複用 | issuer, active-etf, local-sitc, warning-in-name, umbrella-fund | 2026-04-18 |
 | [[wiki/issuers/first-financial-sitc\|第一金投信]] | 00994A 發行商，First Financial SITC（本土、推定第一金控）。**本土 flat 第 4 家且最低（0.70%）**、保管費 0.035% flat、揭露風格中性保守（無特殊主動策略揭露）、官網 fsitc.com.tw eval 失敗（本土第 4 家官網抓取困難）、**低費率+低規模陷阱（24 億）** | issuer, active-etf, local-sitc, taiwan-50-benchmark | 2026-04-18 |
+| [[wiki/issuers/cathay\|國泰投信]] | 00400A 發行商，Cathay SITC（本土、國泰金控）。**大型本土投信**（00878 被動 1800+ 億旗艦）、**主動首檔 19 天 107 億規模爆量**、**本土 flat 0.9% 雙例**（元大齊等）、**保管費罕見階梯 0.06%/0.04%**（本土台股唯一非 0.035% flat 且非 00981A 高水準）、**官網 Access Denied（本土第 5 家抓取困難）**、延後入市策略類似元大 | issuer, active-etf, local-sitc, large-local | 2026-04-18 |
 
 ### Mechanisms
 

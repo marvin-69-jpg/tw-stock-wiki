@@ -4,6 +4,36 @@
 
 ---
 
+## 2026-04-18 — 第二十三輪 ingest：國泰 00400A 動能高息（第 10 家投信）+ 本土 flat 0.9% 雙例 + 動能 factor 首見 + 保管費罕見階梯
+
+**時間**：2026-04-18（cron loop round 23）
+**觸發**：CronCreate 排程
+
+**研究目的**：Ingest 國泰首檔主動 ETF 00400A，擴展研究至第 10 家投信，測試本土大型投信的主動策略。
+
+**Raw 新增**：
+- `raw/2026/04/18-cathay-00400a-yahoo.md` — Yahoo Finance + 國泰官網 Access Denied 紀錄
+
+**Wiki 新增**：
+- `wiki/etfs/00400a.md` — 國泰首檔主動 ETF、2026-03-30 成立、107.18 億、flat 0.9% + 保管費階梯 0.06%/0.04%、動能高息雙 factor、梁恩溢
+- `wiki/issuers/cathay.md` — 國泰投信首次建立（第 10 家）、大型本土、延後入市策略、官網 Access Denied
+
+**Wiki 更新**：
+- `wiki/mechanisms/active-etf-fee-disclosure.md` — Round 23 timeline、Related 新增
+- `index.md` — 新增 00400A 列、國泰投信列、頂部 Round annotation 加 Round 23
+
+**本輪關鍵發現**：
+
+1. **第 10 家投信國泰**
+2. **本土 flat 0.9% 雙例**：元大 + 國泰（兩大本土龍頭管理費同步）
+3. **保管費罕見階梯**：國泰 0.06%/0.04% 高於本土台股 flat 0.035% 常態
+4. **動能（momentum）factor 首見 explicit 命名**
+5. **規模爆量第 2 快**：19 天 107 億、日均 +5.64 億（僅次 00981A 統一）
+6. **官網抓取困難本土第 5 家**：Access Denied
+7. **新投信候選**：00401A 摩根（Yahoo 網友也在看出現，可能第 11 家投信）
+
+---
+
 ## 2026-04-18 — 第二十二輪 ingest：復華 00998A 金融股息（復華第 2 檔）+ 三個新機制首見（櫃 ETF、傘型、Yahoo 截斷）+ Round 21 警語嵌名結論反削弱
 
 **時間**：2026-04-18（cron loop round 22）
