@@ -4,6 +4,64 @@
 
 ---
 
+## 2026-04-18 — 第三十九輪 ingest（ripple 輪）：issuer-divergence-logic.md 由 9 家 6 維擴充為 10 家 7 維 + 類型 7 信用等級非傘型（聯博）+ 類型 6 子分歧（配息頻率）+ 傘型 vs 非傘型對照
+
+**時間**：2026-04-18（cron loop round 39）
+**觸發**：CronCreate 排程；Round 37 發現聯博為第 10 家 ≥2 檔投信後第二層 ripple
+
+### 目的
+
+Round 37 primary source 發現聯博 00980D，聯博成為第 10 家 ≥2 檔主動 ETF 投信。本頁原為 Round 32 建立（9 家 6 維版），需擴充為 10 家 7 維 + 加入 Round 36 發現的配息頻率子分歧。
+
+### 更新內容
+
+**重寫 `wiki/mechanisms/issuer-divergence-logic.md`**：
+
+1. **對照表：6 種 → 7 種分歧維度**，加入**類型 7「信用等級（非傘型）」= 聯博 00980D/00984D**
+2. **新增第 4 節「類型 4 vs 5 vs 7 對照」**：傘型 vs 非傘型三種信用/資產軸分歧：
+   - 類型 4（富邦，傘型）：同結構 + 同交易所
+   - 類型 5（復華，傘型）：同結構 + 同交易所
+   - 類型 7（聯博，非傘型）：**異結構 + 異交易所**（最大自由度）
+3. **新增第 5 節「類型 6 子分歧」**（Round 36 補充）：安聯兩檔費率相同但**配息頻率分化**（00984A 季配 vs 00993A 年配），類型 6 精確定義為「費率無分歧、其他維度分歧」
+4. **新增第 6 節「類型 7 深度解析」**：聯博 00980D vs 00984D 跨信用/交易所/結構/發行價/策略類型的完整對比，費率結構 ↔ 策略類型假說（量化 vs 全主動）
+5. **投信類型交叉表更新**：本土 vs 外資 = 6/10 vs 4/10（Round 37 聯博加入後）；外資分歧維度最多元（野村/摩根/安聯/聯博 = 4 種完全不重疊）
+6. **漏洞清單擴展**：
+   - #3 新增「非傘型也可跨結構類型 + 跨交易所」（聯博示範）
+   - #6 新增「配息頻率作為隱藏分歧維度」+ 野村 00985A 年配 vs 00999A 季配 = 第二個已知案例
+7. **時間線加入 Round 36 / 37 / 39**
+
+### Index 更新
+
+- `issuer-divergence-logic` 列描述：9 家 6 維 → **10 家 7 維**，加 Round 36 子分歧 + Round 37 類型 7，tag 加 `credit-quality-divergence`
+
+### 新假說（Round 39）
+
+**「費率無分歧 + 配息頻率分歧」可能是普遍隱藏模式**：
+- 安聯（已確認）：費率同 + 季配 vs 年配
+- 野村（已觀察但未列為類型 6）：00985A 年配 vs 00999A 季配 —— 野村費率有分歧但配息頻率也分歧
+- → TODO：抓齊 ≥2 檔投信的配息頻率光譜，驗證配息頻率是否為普遍分歧維度
+
+### 新方法論觀察
+
+**分歧邏輯多維度同時疊加**：
+- 聯博一次同時跨「信用等級 + 結構類型 + 交易所 + 發行價 + 策略類型」5 個維度
+- 其他投信多為 1-2 維度
+- → 聯博為分歧強度最大的投信、對散戶辨識「同投信」的 mental model 幾乎失效
+
+### 未處理（Round 40+）
+
+- `wiki/mechanisms/active-etf-fee-disclosure.md` 加「外資 flat signature 推翻」+ 策略類型假說（flat vs 階梯 ≈ 策略類型偏好）
+- `wiki/mechanisms/income-equalization.md` 加 00980D A+B+C 每日揭露為揭露品質標竿
+- TPEx ETF 主動 ETF 母體補強 audit（primary、需 agent-browser 抓 TPEx 官網 ETF 篩選器）
+- 抓齊 ≥2 檔投信的配息頻率光譜，驗證配息頻率分歧是否普遍
+
+### TODO for 下一輪
+
+- Round 40：TPEx 主動 ETF 母體 primary source 抓取（補 Round 24 audit 盲區）—— 最重要 meta-methodology 補強
+- Round 41：`active-etf-fee-disclosure.md` 加外資 flat signature 推翻段
+
+---
+
 ## 2026-04-18 — 第三十八輪 ingest（ripple 輪）：active-bond-etf-d-suffix.md 修正為 5 檔（加 00980D、首檔順序修正）+ 外資 flat signature 推翻段 + A+B+C 揭露段 + TPEx 盲區段
 
 **時間**：2026-04-18（cron loop round 38）
