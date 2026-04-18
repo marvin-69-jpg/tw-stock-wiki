@@ -4,6 +4,50 @@
 
 ---
 
+## 2026-04-18 — 第三十八輪 ingest（ripple 輪）：active-bond-etf-d-suffix.md 修正為 5 檔（加 00980D、首檔順序修正）+ 外資 flat signature 推翻段 + A+B+C 揭露段 + TPEx 盲區段
+
+**時間**：2026-04-18（cron loop round 38）
+**觸發**：CronCreate 排程；Round 37 發現 00980D 後第一層 ripple
+
+### 目的
+
+Round 37 發現聯博 00980D 為 D 字尾真正首檔（2025-07-24、TPEx），導致 `wiki/mechanisms/active-bond-etf-d-suffix.md`（Round 33 建、原 4 檔版）需擴展。本輪為擴散更新、不抽新 primary source。
+
+### 更新內容
+
+**重寫 `wiki/mechanisms/active-bond-etf-d-suffix.md`**：
+
+1. **對照表：4 檔 → 5 檔**（加入 00980D 首列，按成立日排序）
+2. **歷史順序修正**：D 字尾真正首檔 = 00980D 2025-07-24（非原記錄的富邦 00982D 2025-09-30）
+3. **信用費率光譜擴展**：加入 00980D（投等含少量非投、階梯 0.65%、量化策略）
+4. **新增第 3 節「外資 flat signature 推翻」**：聯博跨兩檔費率結構分歧（投等階梯 vs 非投等 flat），原「flat = 外資」歸納降級為「flat ≈ 外資傾向」，新提出 flat vs 階梯可能對應策略類型（量化 vs 全主動）
+5. **月配息擴展為 5/5**：00980D 成立 ≈3 個月即首配（最積極月配節奏）、A 字尾仍 0
+6. **新增第 6 節「淨值 A+B+C 每日揭露」**：聯博 00980D 每日揭露基本面額 + 收益平準金 + 資本損益平準金，B 單調上升、C 波動大；研究範圍 NAV 揭露品質標竿；同投信 00984D 無 A+B+C 揭露（內部不一致）
+7. **擴展第 9 節「交易所 + TPEx 盲區」**：5 檔中 2 檔 TPEx（00980D + 00986D），聯博同投信跨 TPEx+TWSE 首見；Round 24 TWSE audit 漏網成為 meta-methodology 第 16 種揭露不對稱候選
+8. **漏洞清單擴展**：
+   - 命名直白度差（加入 00980D 雙層明示：信用等級嵌名 + 警語嵌名）
+   - 月配息組成揭露不對稱強化（5 檔中僅 00980D 揭露 A+B+C）
+   - TPEx 流動性 + audit 雙重盲區
+   - **新增 #6：同投信跨信用等級費率結構分歧首見**（聯博非傘型、結構類型差而非水準差）
+
+### Index 更新
+
+- `active-bond-etf-d-suffix` 列描述：4 檔 → 5 檔、加 Round 37 新增段、tag 加入 `nav-composition-daily, tpex-blindspot`
+
+### 未處理（Round 39+）
+
+- `wiki/mechanisms/issuer-divergence-logic.md` 加聯博 = 信用等級（非傘型）= 第 7 種分歧邏輯（Round 37 已建議、本輪未動）
+- `wiki/mechanisms/active-etf-fee-disclosure.md` 加「外資 flat signature 推翻」+ 策略類型假說
+- `wiki/mechanisms/income-equalization.md` 加 A+B+C 每日揭露為揭露品質標竿
+- TPEx ETF 篩選器 URL + TPEx 主動 ETF 完整母體（primary source、補 Round 24 audit 盲區）—— 需下一輪 primary 抓
+
+### TODO for 下一輪
+
+- Round 39：issuer-divergence-logic.md 更新為 10 家（聯博）+ 第 7 種（信用等級非傘型）
+- Round 40：TPEx ETF 主動 ETF 母體補強 audit（primary）
+
+---
+
 ## 2026-04-18 — 第三十七輪 ingest（primary source 輪）：聯博官網 → 發現 00980D 投等入息（D 字尾真正首檔、Round 24 TWSE audit 盲區）+ 外資階梯費率首見推翻 flat signature + 淨值 A+B+C 每日揭露
 
 **時間**：2026-04-18（cron loop round 37）
