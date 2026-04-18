@@ -4,6 +4,82 @@
 
 ---
 
+## 2026-04-18 — 第四十一輪 ingest（primary source 輪、Round 40 補完）：00981D 主動中信非投等債（中信第 3 檔、首檔 D 字尾 + 首檔債券 ETF、D 字尾實際第 2 檔）+ 中信分歧邏輯升維（地域 + 資產類型雙維）+ 三段階梯保管費斷點分歧（100/200 億 ≠ 富邦 100/300 億）
+
+**時間**：2026-04-18（cron loop round 41）
+**觸發**：CronCreate 排程；Round 40 TPEx audit 發現兩檔未 ingest ETF，本輪補第 1 檔。
+
+### 抓取路徑
+
+1. `agent-browser open https://tw.stock.yahoo.com/quote/00981D` → 主頁報價
+2. `agent-browser open https://tw.stock.yahoo.com/quote/00981D/profile` → profile 完整資料
+3. eval body.innerText 抽出所有欄位（發現 substring 區段誤判、改全文抽取）
+4. Round 41 方法論：Yahoo 作為 scaffold primary、後續輪補 MOPS / 中信官網 / SITCA
+
+### Raw 新增
+
+- `raw/2026/04/18-ctbc-00981d-yahoo.md` — 00981D Yahoo profile + TPEx 上櫃日交叉驗證、費率結構、配息、與中信其他主動 ETF 對比表、Yahoo 推薦演算法觀察
+
+### Wiki 新增
+
+- `wiki/etfs/00981d.md` — 完整 Compiled Truth：基本資料 / 費率結構（2 段階梯管理 + 3 段階梯保管 100/200 億斷點）/ 中信三檔對比 / Yahoo 推薦斷裂 / 6 個揭露不對稱觀察
+
+### Wiki 更新
+
+- `wiki/issuers/ctbc-sitc.md` — TL;DR 更新為 3 檔 + 雙維分歧 + 跨所、Round 21 段擴為 Round 41 升維段、新增「跨 TWSE + TPEx 佈局」段、Timeline 新增 Round 41 entry、sources 加兩筆、TODO 更新
+- `index.md` — 頂部 Round 41 note、TPEx 母體表 00981D 標為 ✅、新增 00981D ETF row、中信 issuer row 更新為雙維分歧
+
+### 重大發現
+
+1. **Round 22 中信純地域分歧假說被推翻**：
+   - 00983A（美股股票、4 段階梯 1.0-0.7%）+ 00995A（台股股票、flat 0.75%）→ 原歸納「地域分歧」
+   - **00981D（美股債券、2 段階梯 0.75/0.65%）**：同地域（美股）但費率結構與 00983A 完全不同
+   - → **分歧邏輯 = 地域 + 資產類型雙維**（全研究第 1 個雙維分歧投信）
+
+2. **三段階梯保管費第 2 例、但斷點不同**：
+   - 富邦 00982D/00983D：100/300 億斷點（Round 28 首見）
+   - 中信 00981D：**100/200 億斷點**（第二段壓縮）
+   - → 三段階梯**非「富邦簽名」**、是通用選擇；**斷點為投信級設計**
+
+3. **中信 = 第 2 家跨 TWSE+TPEx 佈局投信**（同聯博）：
+   - 股票（00983A/00995A）上 TWSE
+   - 債券（00981D）上 TPEx
+   - → **資產類型與上市地存在關聯**（D 字尾早期偏 TPEx）
+
+4. **D 字尾實際第 2 檔確認**（Round 40 修正後）：
+   - 00980D 聯博（2025-08-04）→ **00981D 中信（2025-09-16、早富邦 2 週）** → 00982D/00983D 富邦
+   - 前 2 檔都 TPEx
+
+5. **Yahoo 推薦斷裂第 2 案**（Round 29 印證）：
+   - 00981D「你也可能對這些有興趣」清單全為被動非投等債（00953B/00981B/00945B）
+   - 與 00984D 相同模式 → **主動債券 ETF 在 Yahoo 發現路徑被動化** 為系統性現象
+
+6. **命名路線貼近聯博 00984D**（「非投等債」直白、不包裝）vs 富邦 00982D「動態入息」抽象。
+
+### 失敗嘗試
+
+- 第一次 eval `body.innerText.substring(2000, 10000)` 返回空字串 → body 實際 1976 字、substring 超出範圍
+- 修正：改抓完整 body.innerText
+
+### TODO for 後續輪
+
+- Round 42：ingest **00985D 主動貝萊德優投等**（最後一檔 TPEx 新發現、第 15 家投信、需抓貝萊德投信官網 + TPEx）
+- Round 43 擴散：
+  - `wiki/mechanisms/active-bond-etf-d-suffix.md` 5 檔 → **7 檔**（加 00981D 三段階梯斷點分歧 + 00985D 貝萊德投等）
+  - `wiki/mechanisms/issuer-divergence-logic.md` 10 家 → **11 家**（加貝萊德）、中信升維為雙維分歧範本
+  - `wiki/mechanisms/active-etf-fee-disclosure.md` 外資 flat signature 再評估（貝萊德是否階梯？）
+- Round 44+：
+  - 00981D MOPS 公開說明書驗證管理費階梯斷點、保管銀行
+  - 中信官網 00981D 頁警語嵌名驗證
+
+### 方法論確認
+
+- 本輪用 Yahoo 作為 scaffold primary（與 Round 32-36 類似）、速度快、資料欄位完整
+- 後續 MOPS / SITCA / 中信官網 = 下一階段驗證
+- TPEx primary（Round 40）+ Yahoo profile（Round 41）兩層驗證奏效：上櫃日、經理人、費率結構都一致
+
+---
+
 ## 2026-04-18 — 第四十輪 ingest（primary source 輪、meta-methodology）：TPEx 主動式 ETF 商品頁抓取 → 發現 5 檔 TPEx 主動 ETF（本研究先前只知 3 檔），2 檔全新：00981D 中信非投等債 + 00985D 貝萊德優投等（第 15 家投信）
 
 **時間**：2026-04-18（cron loop round 40）
