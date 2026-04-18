@@ -15,7 +15,7 @@
 | ~~00983D~~ | ~~主動富邦複合收益~~ | ~~2025.09.30~~ | ~~10.32 億~~ | ~~富邦~~ | ✅ Round 28 ingest |
 | ~~00984D~~ | ~~主動聯博全球非投~~ | ~~2026.02.04~~ | ~~13 億~~ | ~~聯博~~ | ✅ Round 29 ingest（成立 2026-01-22）|
 | ~~00989A~~ | ~~主動摩根美國科技~~ | ~~2025.10.22~~ | ~~18 億~~ | ~~摩根~~ | ✅ Round 26 ingest |
-| 00993A | 主動安聯台灣 | 2026.02.03 | **126 億** | 安聯 | 安聯第 2 檔、規模夠大卻 Yahoo 未推 |
+| ~~00993A~~ | ~~主動安聯台灣~~ | ~~2026.02.03~~ | ~~**126 億**~~ | ~~安聯~~ | ✅ Round 31 ingest（成立 2026-01-20，125.5 億）|
 
 **漏掉的投信**：富邦（首批主動債券 ETF 發行者）、摩根（00989A 是入列證據）、兆豐（00996A）、聯博（00984D 外資）
 
@@ -59,6 +59,7 @@
 | [[wiki/etfs/00983d\|00983D — 主動富邦複合收益]] | 富邦投信、**2025-09-30 成立（同傘姊妹）**、10.32 億、**管理費階梯 0.55%/0.65%（比 00982D +0.10 pp）**、**保管費三段階梯 0.10/0.08/0.06%**、複合收益債（疑含非投等）、全球、游陳達（同傘不同人）、**月配息** 0.06 元（年化 ≈ 7.05%）、**同傘內分歧邏輯 = 風險等級（第 5 種分歧邏輯）** | active-etf, active-bond-etf, d-suffix, fubon, cross-border, multi-sector-bond, umbrella-fund, monthly-dividend, tiered-custody-3step | 2026-04-18 |
 | [[wiki/etfs/00984d\|00984D — 主動聯博全球非投]] | 聯博投信（**第 14 家投信**、外資美商 AllianceBernstein、Round 29 首建）、**2026-01-22 成立（主動債券 ETF 第 3 檔）**、12.86 億（3 個月）、**flat 0.80% + flat 0.12%**（外資 flat signature 延續至債券型）、**非投等債直白嵌名**、全球、陳俊憲、**月配息 0.085 元 = 年化 ≈ 10.07%（本研究最高殖利率）**、地址 **101 大樓 81 樓**、**Yahoo 推薦演算法對非投等債完全斷裂**（只推大盤股） | active-etf, active-bond-etf, d-suffix, alliancebernstein, foreign-invested, cross-border, high-yield-bond, non-investment-grade, flat-fee, monthly-dividend | 2026-04-18 |
 | [[wiki/etfs/00986d\|00986D — 主動復華金融債息]] | 復華投信、**2026-03-31 成立（同傘 00998A 同日）**、**櫃 ETF TPEx 第 2 例**、**D 字尾第 4 檔**、34.37 億（3 週、規模爆發力第一）、**管理費階梯 0.60%/0.70% + 保管費 0.06%~0.10%**、**保管銀行台北富邦銀行（與同傘 00998A 合作金庫不同 = Round 30 傘型保管銀行獨立首見）**、全球金融債、黃媛君、復華**第 3 檔主動 ETF 第 3 位獨立經理人**（不複用）、收盤 14.84 元（發行價推定 15 元）、尚未首次配息 | active-etf, active-bond-etf, d-suffix, fuhwa, cross-border, financial-sector-bond, umbrella-fund, otc-etf, tpex, tiered-fee | 2026-04-18 |
+| [[wiki/etfs/00993a\|00993A — 主動安聯台灣]] | 安聯投信（外資德系）、**2026-01-20 成立（安聯第 2 檔、A 字尾 Range Gap 最後一檔）**、**125.5 億（3 個月外資爆量、與國泰 127 億齊平）**、**flat 0.70% + flat 0.035%（與姐姐 00984A 完全相同）= 本研究首見「同發行商兩檔主動 ETF 管理費完全相同」**、benchmark **臺灣加權股價指數**、施政廷（單人、與 00984A 段俊廷不同）、**連 9 漲 +17.44%（本研究最高單段漲幅未列警示）**、**極簡命名（無策略形容 vs 姐姐嵌「高息成長」）**、**第 6 種同發行商分歧邏輯 = 無分歧** | active-etf, taiwan-equity, allianz, foreign-invested, flat-fee, benchmark-taiwan-weighted, minimalist-naming | 2026-04-18 |
 
 > **首批 6 檔（2025-05 到 07）**：00980A 野村優選 / 00982A 群益強棒 / 00981A 統一增長 / 00983A 中信 ARK 創新 / 00984A 安聯高息 / 00985A 野村 50
 
@@ -68,7 +69,7 @@
 |------|---------|------|-------------|
 | [[wiki/issuers/uni-president\|統一投信]] | 00981A/00988A 發行商，UPAMC。**2 檔主動 ETF 分歧邏輯 = 地域**（台股 階梯 1.2%/1.0% vs 全球 階梯 1.4%/1.2%，整條 +0.2 pp）、**跨國溢價全在管理費、保管費無平移** | issuer, active-etf | 2026-04-18 |
 | [[wiki/issuers/capital-sitc\|群益投信]] | 00982A/00992A/00997A 發行商，Capital SITC。揭露風格「主動警示、配息不拆解」、**3 檔主動 ETF 完成**：00982A 台股全市場 flat 0.8% / 00992A 台股科技 階梯 1.2%-1.0% / 00997A 美股 階梯 1.2%-1.0%（保管費 0.1%-0.12% 為台股 3 倍）、**分歧邏輯 = 主題深度**（非地域/裁量權）、**3 檔 3 位獨立經理人不複用** | issuer, active-etf | 2026-04-18 |
-| [[wiki/issuers/allianz\|安聯投信]] | 00984A/00993A 發行商，AGI Taiwan（外資）。費率 flat 0.7%，ETF 配息組成不揭露 | issuer, active-etf, foreign-invested | 2026-04-18 |
+| [[wiki/issuers/allianz\|安聯投信]] | 00984A/00993A 發行商，AGI Taiwan（外資德系）。**2 檔主動 ETF 管理費完全相同 flat 0.70% = 本研究首見同發行商同費率**、**第 6 種同發行商分歧邏輯 = 無分歧**（策略差異不以費率表達）、00993A 3 個月 125.5 億與國泰 127 億齊平（推翻「外資規模弱」觀察）、兩檔經理人不複用（段俊廷 / 施政廷）、兩檔命名策略不一致（嵌「高息成長」vs 極簡）、ETF 配息組成不揭露但共同基金詳細揭露 | issuer, active-etf, foreign-invested, flat-fee-uniform | 2026-04-18 |
 | [[wiki/issuers/nomura\|野村投信]] | 00980A/00985A/00999A 發行商，Nomura Asset Management Taiwan（日系外資）。**同發行商內費率水準差反映主動程度**：00980A 0.75% 全主動 vs 00985A 0.45% 增強指數 | issuer, active-etf, foreign-invested, japanese | 2026-04-18 |
 | [[wiki/issuers/ctbc-sitc\|中信投信]] | 00981D/00983A/00995A 發行商，CTBC Investments（本土、中信金控）。**2 檔股票主動 ETF 結構完全不同**：00983A 美股 4 段階梯 vs 00995A 台股 flat 0.75%——**分歧邏輯 = 地域（同台新）**。警告嵌入 ETF 名稱**非全產品一致**（00983A 嵌 vs 00995A 未嵌）——**產品級選擇，非投信文化** | issuer, active-etf, local-sitc | 2026-04-18 |
 | [[wiki/issuers/tsit\|台新投信]] | 00986A/00987A 發行商，Taishin SITC（本土、台新新光金）。**非首批、兩檔都 flat、台股 vs 跨國費率差反映地域成本**、**類別錯誤 + 產品主題錯誤為系統性揭露瑕疵**（兩檔都有被動模板誤植）、100% 經理人來自首批挖角 | issuer, active-etf, local-sitc, flat-fee-local, disclosure-error | 2026-04-18 |
